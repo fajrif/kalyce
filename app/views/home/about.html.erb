@@ -1,0 +1,51 @@
+<%= render "about_banner" %>
+<!-- About Section -->
+<section class="about-section style-two">
+	<div class="auto-container">
+		<div class="row justify-content-between align-items-end">
+			<div class="col-lg-9">
+				<h1 class="fw-700">
+					<%= raw get_about.title %>
+				</h1>
+			</div>
+		</div>
+		<div class="row pt-10 layout-pb-100">
+			<!-- Content Column -->
+			<div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+				<div class="inner-column wow fadeInLeft">
+					<div class="sec-title mt-20 ml-0">
+						<div class="text">
+							<%= raw get_about.description1 %>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Content Column -->
+			<div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+				<div class="inner-column wow fadeInLeft">
+					<div class="sec-title mt-20 ml-0">
+						<div class="text">
+							<%= raw get_about.description2 %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Section -->
+<%= render "vision_mission" %>
+
+<!-- Subscribe Section -->
+<section class="our-team-pic layout-pt-100 layout-pb-100">
+	<div class="auto-container wow fadeInUp" style="padding:0;">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<%= image_tag("our-team.png", class: "border-radius-8") %>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Subscribe Section -->
+

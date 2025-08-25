@@ -1,0 +1,38 @@
+<!--Tabs Box-->
+<div class="tab-buttons-wrap">
+	<ul class="tab-buttons -pills-condensed -blue">
+		<% @specialists.each do |specialist| %>
+			<li class="tab-btn <%= 'active-btn' if specialist.id == @specialist.id %>"><%= link_to specialist.name.downcase.titleize, search_doctors_path(specialist.id), remote: true %></li>
+		<% end %>
+	</ul>
+</div>
+
+<div class="tabs-content pt-20">
+	<!--Tab-->
+	<div class="tab">
+		<div class="row">
+			<% if @doctors.empty? %>
+				<p>No specialist found for: <%= @specialist.name.downcase.titleize %></p>
+			<% else %>
+				<% @doctors.each do |doctor| %>
+					<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12">
+						<div class="inner-box" style="padding-right:0;">
+							<div class="content-box">
+								<figure class="image">
+									<% if doctor.photo.attached? %>
+										<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:80px;" %>
+									<% else %>
+										<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:80px;" %>
+									<% end %>
+								</figure>
+								<h4 class="name"><%= link_to doctor.profesional_name, doctor_path(doctor), class: "text-black" %></h4>
+								<span class="designation">Available Today</span>
+								<a href="https://wa.me/<%= configatron.wa_number %>?text=<%= url_encode("Halo saya ingin menjadwalkan appointment \ndengan *#{doctor.profesional_name}* \npada (TANGGAL DAN JAM)\n\nNama: \nNIK: \nTgl Lahir: \nJenis Kelamin: \nNo.HP: ") %>" class="theme-btn btn-style-three small">Make Appointment</a>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>

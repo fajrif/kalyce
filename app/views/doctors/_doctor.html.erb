@@ -1,0 +1,16 @@
+<!-- Blog Block -->
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+	<div class="blog -type-1">
+		<div class="blog-image">
+			<% if doctor.photo.attached? %>
+				<%= image_tag doctor.photo.variant(resize: "284x344").processed, class: "border-radius-8", style: "width:284px;" %>
+			<% else %>
+				<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:284px;" %>
+			<% end %>
+		</div>
+		<div class="blog-content">
+			<h4><%= link_to doctor.profesional_name, doctor_path(doctor) %></h4>
+			<div><strong><%= doctor.title %></strong></div>
+		</div>
+	</div>
+</div>

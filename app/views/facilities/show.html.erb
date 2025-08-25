@@ -1,0 +1,32 @@
+<!-- Blog Single -->
+<section class="blog-single">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700"><%= @facility.name.downcase.titleize %></h2>
+				<div style="font-size:20px;line-height:22px;"><%= @facility.headline %></div>
+			</div>
+		</div>
+	</div>
+	<div class="auto-container">
+		<div class="row justify-content-between">
+			<div class="col-lg-12 text-center pt-30 pb-30">
+				<%= image_tag @facility.image.variant(resize: "1132x390").processed, class: "border-radius-8" %>
+			</div>
+			<div class="col-lg-12">
+				<div class="margin-left-right-100">
+					<%= raw @facility.description %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Blog Single -->
+<%= content_for :tail do %>
+<style>
+	.blog-single .img1 > img,
+	.blog-single .img2 > img {
+		width: 80%;
+	}
+</style>
+<% end %>

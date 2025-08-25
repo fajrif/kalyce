@@ -1,0 +1,24 @@
+<section class="page-title style-two" style="background-image: url(<%= url_for(@article.image) %>);">
+	<div class="auto-container">
+	</div>
+</section>
+
+<!-- Blog Single -->
+<section class="blog-single">
+	<div class="auto-container">
+		<div class="upper-box">
+			<h3><%= @article.title %></h3>
+			<ul class="post-info">
+				<li><%= @article.try(:published_date).try(:strftime, '%B %d, %Y') %></li>
+				<li><%= @article.category.name %></li>
+			</ul>
+		</div>
+	</div>
+	<div class="auto-container">
+		<% unless @article.headline.blank? %>
+			<p><strong><%= @article.headline %></strong></p>
+		<% end %>
+		<%= raw @article.content %>
+	</div>
+</section>
+<!-- End Blog Single -->
