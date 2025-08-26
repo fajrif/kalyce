@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   resource :contact, :only => [:show, :create]
 
   match 'about', to: 'home#about', via: :get, as: :about
+  match 'treatments', to: 'home#treatments', via: :get, as: :treatments
   match '/practitioners', to: 'practitioners#index', via: :get, as: :practitioners
   match '/practitioners/:id', to: 'practitioners#show', via: :get, as: :practitioner
   match '/journals', to: 'journals#index', via: :get, as: :journals

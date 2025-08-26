@@ -1,47 +1,64 @@
 /*==============================================================
     pull menu
  ==============================================================*/
-(function($) {
-  "use strict";
 
-	var bodyEl = document.body,
-			closeBtn = $("#menu-wrap-close-btn"),
-			mask = $("#menu-wrap-menu-1 .menu-wrap-mask"),
-			topBar = $(".top-header-area"),
-			parentMenu = $(".full-width-pull-menu"),
-			menu = $("#menu-wrap-menu-1");
+function bindEvent(el, eventName, eventHandler) {
+    if (el.addEventListener) {
+        el.addEventListener(eventName, eventHandler, false);
+    } else if (el.attachEvent) {
+        el.attachEvent('on' + eventName, eventHandler);
+    }
+}
 
-	function closeMenu() {
-    menu.removeClass("active");
-		var showMenu = $('.menu-wrap-content-menu.show');
-		showMenu.removeClass("show");
-		parentMenu.removeClass("opened-menu");
-		topBar.removeClass("opened-menu");
-		classie.remove(bodyEl, 'overflow-hidden');
-	}
+(function () {
 
-	$('.open-wrap-menu').each(function () {
-		var $this = $(this);
-		$this.on("click", function () {
-			closeMenu();
-			// console.log($(this).data('menu-id'));
-			var _menuId = $(this).data('menu-id');
-			var menuId = $('#' + _menuId);
-			menuId.addClass("show");
-			menu.addClass("active");
-			parentMenu.addClass("opened-menu");
-			topBar.addClass("opened-menu");
-			classie.add(bodyEl, 'overflow-hidden');
-		});
-	});
+    var bodyEl = document.body,
+            //content = document.querySelector( '.content-wrap' ),
+            openbtn = document.getElementById('open-button'),
+            closebtn = document.getElementById('close-button'),
+            isOpen = false;
 
-  // Close menu when click on Close button
-  closeBtn.on("click", function() {
-		closeMenu();
-  });
+    function init() {
+        initEvents();
+    }
 
-  mask.on("click", function() {
-		closeMenu();
-  });
+    function initEvents() {
+        if (openbtn) {
+            bindEvent(openbtn, 'click', toggleMenu);
 
-})(jQuery);
+        }
+        //openbtn.addEventListener( 'click', toggleMenu );
+        if (closebtn) {
+
+            bindEvent(closebtn, 'click', toggleMenu);
+            //closebtn.addEventListener( 'click', toggleMenu );
+        }
+
+        // close the menu element if the target itÂ´s not the menu element or one of its descendants..
+
+    }
+
+    function toggleMenu() {
+
+        if (isOpen) {
+            classie.remove(bodyEl, 'show-menu');
+             if ( $( ".full-width-pull-menu" ).length ) {
+                 classie.remove(bodyEl, 'overflow-hidden');
+                 classie.remove(bodyEl, 'position-fixed');
+            }
+        }
+        else {
+            classie.add(bodyEl, 'show-menu');
+            
+            if ( $( ".full-width-pull-menu" ).length ) {
+                classie.add(bodyEl, 'overflow-hidden');
+                classie.add(bodyEl, 'position-fixed');
+            }
+           
+        }
+        isOpen = !isOpen;
+    }
+
+    init();
+
+})();

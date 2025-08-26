@@ -25,6 +25,34 @@ module ApplicationHelper
 		end
   end
 
+  def set_bg_menu
+    bg_menu = "bg-menu-home"
+    if is_home_page?
+      return bg_menu
+    end
+    if is_about_page?
+      bg_menu = "bg-menu-about"
+      return bg_menu
+    end
+    if is_treatments_page?
+      bg_menu = "bg-menu-treatments"
+      return bg_menu
+    end
+    if is_practitioners_page?
+      bg_menu = "bg-menu-practitioners"
+      return bg_menu
+    end
+    if is_journals_page?
+      bg_menu = "bg-menu-journals"
+      return bg_menu
+    end
+    if is_contact_page?
+      bg_menu = "bg-menu-contact"
+      return bg_menu
+    end
+    return bg_menu
+  end
+
 	def is_home_page?
 		controller.controller_name == "home" && controller.action_name == "index"
 	end

@@ -1,0 +1,35 @@
+<section class="pt-0 wow animate__fadeIn fadeInUp">
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto text-center">
+                <h3 class="alt-font text-extra-dark-gray font-weight-600">Our Practitioners</h3>
+                <p class="w-80 mx-auto d-inline-block sm-w-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center">
+          <% @doctors.each_with_index do |doctor, index| %>
+            <!-- start services item -->
+            <div class="col-sm-9 md-margin-40px-bottom wow animate__fadeInUp" data-wow-delay="0.<%= index + 2 if index > 0 %>s">
+                <div class="margin-five-bottom overflow-hidden image-hover-style-1 sm-margin-20px-bottom">
+                  <a href="<%= practitioner_path(doctor) %>">
+                    <%= image_tag url_for(doctor.photo) %>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="#" class="alt-font margin-10px-bottom d-block text-extra-large text-extra-dark-gray font-weight-600"><%= doctor.profesional_name %></a>
+                  <p>Lorem Ipsum is simply text the printing and typesetting standard industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                </div>
+                <div class="padding-20px-all sm-padding-15px-all">
+                    <a href="<%= practitioner_path(doctor) %>" class="text-uppercase alt-font text-extra-dark-gray font-weight-400 text-medium justify-content-between d-flex w-100 border-bottom border-black pb-2">Learn More <i class="fa-solid fa-arrow-right-long margin-5px-left text-black text-medium position-relative top-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <!-- end services item -->
+          <% end %>
+      </div>
+      <div class="text-center margin-five-top wow animate__fadeInUp">
+        <a class="btn btn-large btn-transparent-black text-uppercase" href="#">See More</a>
+      </div>
+    </div>
+</section>
