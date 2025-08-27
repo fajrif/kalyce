@@ -42,10 +42,10 @@ Rails.application.routes.draw do
 
   match 'about', to: 'home#about', via: :get, as: :about
   match 'treatments', to: 'home#treatments', via: :get, as: :treatments
-  match '/practitioners', to: 'practitioners#index', via: :get, as: :practitioners
-  match '/practitioners/:id', to: 'practitioners#show', via: :get, as: :practitioner
-  match '/journals', to: 'journals#index', via: :get, as: :journals
-  match '/journals/:id', to: 'journals#show', via: :get, as: :journal
+  match '/practitioners', to: 'doctors#index', via: :get, as: :practitioners
+  match '/practitioners/:id', to: 'doctors#show', via: :get, as: :practitioner
+  match '/journals', to: 'articles#index', via: :get, as: :journals
+  match '/journals/:id', to: 'articles#show', via: :get, as: :journal
 
   root :to => "home#index"
 end

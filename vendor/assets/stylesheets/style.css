@@ -45,7 +45,7 @@ html {font-size: 15px;}
 body {font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; background-color: #FEF4E4; font-size:16px; color:#000000; font-weight: 400;line-height: 24px;}
 body, html {height: 100%; -moz-osx-font-smoothing: grayscale;}
 a, a:active, a:focus {color: #000000; text-decoration: none;}
-a:hover, a:active{color: #5b5b5b; text-decoration: none;}
+a:hover, a:active{color: var(--base-color); text-decoration: none;}
 a:focus, a:active, button:focus, button:active,.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none; box-shadow: none;}
 img {max-width:100%; height:auto;}
 video {background-size: cover; display: table-cell; vertical-align: middle; width: 100%;}
@@ -83,7 +83,34 @@ header [class^="container-"] [class^="col-"], header [class^="container-"] [clas
 }
 
 /* base color variable*/
-:root {--base-color: #ff214f;}
+:root {
+  --base-color: #ff214f;
+	--black-color: #000;
+	--bgrc-yellow-color: #d4d943;
+	--bgrc-grey-color: #636363;
+	--bgrc-dark-grey-color: #636363;
+	--dark-grey-color: #000;
+	--red-color: #FF6635;
+	--medium-red-color: #FD8F69;
+	--light-red-color: #FFB9A3;
+	--very-light-red-color: #FDE3D9;
+	--gold-color: #9A7B00;
+	--medium-gold-color: #FFDD33;
+	--light-gold-color: #FFEF93;
+	--very-light-gold-color: #FFF8C5;
+	--green-color: #173F37;
+	--medium-green-color: #139D4F;
+	--light-green-color: #D6EF9A;
+	--very-light-green-color: #EBF7CD;
+	--blue-color: #002787;
+	--medium-blue-color: #3761B0;
+	--light-blue-color: #7D9AD9;
+	--very-light-blue-color: #CCDBFD;
+	--grey-color: #E7E7E7;
+	--medium-grey-color: #A3A3A3;
+	--light-grey-color: #F5F5F5;
+	--very-light-grey-color: #E3E3E0;
+}
 
 /* ===================================
     03. Typography
@@ -273,6 +300,7 @@ a.text-very-light-gray-hover:hover {color:#ededed !important;}
 .bg-extra-light-gray {background-color:#e0e0e0}
 .bg-medium-light-gray {background-color:#ededed}
 .bg-light-gray {background-color:#f8f7f6;}
+.bg-teal {background-color:#9EC6C7;}
 .bg-very-light-gray {background-color:#fafafa}
 .bg-deep-pink {background-color: var(--base-color);}
 .bg-transparent-white {background-color: rgba(255,255,255,0.3); background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 37%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%); background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(37%, rgba(255,255,255,0)), color-stop(96%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1))); background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 37%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%); background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 37%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%); background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 37%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%); background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 37%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );}
@@ -2773,7 +2801,7 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 .swiper-pagination-bottom.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-bottom.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bottom .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-bottom .swiper-pagination-custom, .swiper-pagination-bottom .swiper-pagination-fraction {bottom: 0px;}
 
 /* swiper bottom scrollbar full */
-.swiper-bottom-scrollbar-full.swiper-container, .swiper-bottom-scrollbar-full.swiper {height:100%; margin: 0 auto; overflow: hidden; position: absolute; top: 0;  transition: all 0.3s ease-in-out 0.7s; -webkit-transition: all 0.3s ease-in-out 0.7s; -moz-transition: all 0.3s ease-in-out 0.7s; -ms-transition: all 0.3s ease-in-out 0.7s; -o-transition: all 0.3s ease-in-out 0.7s; width: 100%;}
+.swiper-bottom-scrollbar-full.swiper-container, .swiper-bottom-scrollbar-full.swiper {height:100%; margin: 0 auto; overflow: hidden; /*position: absolute; top: 0;*/  transition: all 0.3s ease-in-out 0.7s; -webkit-transition: all 0.3s ease-in-out 0.7s; -moz-transition: all 0.3s ease-in-out 0.7s; -ms-transition: all 0.3s ease-in-out 0.7s; -o-transition: all 0.3s ease-in-out 0.7s; width: 100%;}
 .swiper-bottom-scrollbar-full .swiper-scrollbar {left: 0; opacity: 1; position: absolute; width: 100%; bottom:0; border-radius: 0; height: 2px}
 .swiper-bottom-scrollbar-full .swiper-scrollbar-drag {border-radius: 0; background: var(--base-color)}
 .swiper-bottom-scrollbar-full .swiper-scrollbar {background: rgba(255,255,255,.2)}
@@ -4004,4 +4032,7 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
 }
 #clients .col > img {
   max-width:150px;
+}
+.table>:not(caption)>*>* {
+  background-color: transparent;
 }

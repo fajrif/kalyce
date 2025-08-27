@@ -61,6 +61,10 @@ module ApplicationHelper
 		controller.controller_name == "home" && controller.action_name == "about"
 	end
 
+	def is_treatments_page?
+		controller.controller_name == "home" && controller.action_name == "treatments"
+	end
+
 	def is_facilities_page?
 		controller.controller_name == "facilities"
 	end

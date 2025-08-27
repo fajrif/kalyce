@@ -4299,7 +4299,7 @@
 @media (max-width: 767px) {
     h1, h2, h3, h4, h5, h6 {margin:0 0 17px; padding:0; letter-spacing: 0; font-weight: 400;}
     h1 {font-size:30px; line-height:36px;}
-    h2 {font-size:28px; line-height:34px}
+    h2 {font-size:34px; line-height:34px}
     h3 {font-size:26px; line-height:32px}
     h4 {font-size:24px; line-height:30px}
     h5 {font-size:20px; line-height:28px}
@@ -5625,7 +5625,7 @@
     header nav.nav-box-width.navbar-default, header nav.nav-box-width { padding: 0 0; }
     .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl, .top-header-area>.container-lg, .top-header-area>.container-md, .top-header-area>.container-sm, .top-header-area>.container-xl, .top-header-area>.container-xxl { padding-left: 15px; padding-right: 15px; }
     nav.navbar .container-fluid { padding-left: 15px; padding-right: 15px; }
-		header a.logo img { max-height: 22px; }
+		/*header a.logo img { max-height: 22px; }*/
 		.contain-bottom-background-50 {
 			background-size: cover !important;
 			background-position: bottom !important;

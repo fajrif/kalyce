@@ -39,6 +39,7 @@
 	<%= csrf_meta_tags %>
 	<%= csp_meta_tag %>
 	<%= stylesheet_link_tag 'application', media: 'all' %>
+	<script src="https://www.google.com/recaptcha/api.js?render=<%= configatron.recaptcha_v3_site_key %>"></script>
 	<%= yield :head %>
 </head>
 <body class="w-100">

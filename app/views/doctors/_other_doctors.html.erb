@@ -1,32 +1,31 @@
-<section class="layout-pt-40 layout-pb-60">
-	<div class="auto-container">
-		<div class="row justify-content-between align-items-end">
-			<div class="col-lg-9">
-				<h2 class="fw-700 text-green">
-					OTHER DOCTORS
-				</h2>
-			</div>
-		</div>
-
-		<div class="row grid-base pt-50">
-			<% @doctors.each do |doctor| %>
-				<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12">
-					<div class="inner-box" style="padding-right:0;">
-						<div class="content-box">
-							<figure class="image">
-								<% if doctor.photo.attached? %>
-									<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:80px;" %>
-								<% else %>
-									<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:80px;" %>
-								<% end %>
-							</figure>
-							<h4 class="name"><%= link_to doctor.profesional_name, doctor_path(doctor), class: "text-black" %></h4>
-							<span class="designation">Available Today</span>
-							<a href="https://wa.me/<%= configatron.wa_number %>?text=<%= url_encode("Halo saya ingin menjadwalkan appointment \ndengan *#{doctor.profesional_name}* \npada (TANGGAL DAN JAM)\n\nNama: \nNIK: \nTgl Lahir: \nJenis Kelamin: \nNo.HP: ") %>" class="theme-btn btn-style-three small">Make Appointment</a>
-						</div>
-					</div>
-				</div>
-			<% end %>
-		</div>
-	</div>
+<section class="pt-0 wow animate__fadeIn">
+    <div class="container margin-40px-bottom sm-margin-20px-bottom">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto text-center">
+                <h3 class="alt-font text-extra-dark-gray font-weight-400">Other Practitioners</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-start">
+          <% @doctors.each_with_index do |doctor, index| %>
+            <!-- start services item -->
+            <div class="col-sm-9 md-margin-40px-bottom wow animate__fadeInUp" data-wow-delay="0.<%= index + 2 if index > 0 %>s">
+                <div class="margin-five-bottom overflow-hidden image-hover-style-1 sm-margin-20px-bottom">
+                  <a href="<%= practitioner_path(doctor) %>">
+                    <%= image_tag url_for(doctor.photo) %>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="<%= practitioner_path(doctor) %>" class="alt-font margin-10px-bottom d-block text-extra-large text-extra-dark-gray font-weight-600"><%= doctor.profesional_name %></a>
+                  <p>Lorem Ipsum is simply text the printing and typesetting standard industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                </div>
+                <div class="padding-20px-all sm-padding-15px-all">
+                    <a href="<%= practitioner_path(doctor) %>" class="text-uppercase alt-font text-extra-dark-gray font-weight-400 text-medium justify-content-between d-flex w-100 border-bottom border-black pb-2">Learn More <i class="ti-arrow-right margin-5px-left text-black text-medium position-relative top-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <!-- end services item -->
+          <% end %>
+      </div>
+    </div>
 </section>

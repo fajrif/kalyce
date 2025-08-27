@@ -1,9 +1,9 @@
 /* base color variable*/
 :root {
-	--bs-btn-active-color: var(--veritas-dark-grey-color);
-	--bs-btn-active-bg: var(--veritas-yellow-color);
-	--bs-btn-active-border-color: var(--veritas-yellow-color);
-	--bs-dropdown-link-active-color: var(--veritas-dark-grey-color);
+	--bs-btn-active-color: var(--kalyce-dark-grey-color);
+	--bs-btn-active-bg: var(--kalyce-yellow-color);
+	--bs-btn-active-border-color: var(--kalyce-yellow-color);
+	--bs-dropdown-link-active-color: var(--kalyce-dark-grey-color);
 	--bs-dropdown-link-active-bg: var(--very-light-grey-color);
 	--bs-btn-hover-bg: ;
 }
@@ -31,19 +31,19 @@ header nav .navbar-nav > li > a {
 .btn.btn-yellow {
 	background: var(--base-color);
 	border-color: var(--base-color);
-	color: var(--veritas-dark-grey-color);
+	color: var(--kalyce-dark-grey-color);
 }
 .btn.btn-yellow:hover,
 .btn.btn-yellow:focus {
 	background: transparent;
-	border-color: var(--veritas-dark-grey-color);
-	color: var(--veritas-dark-grey-color);
+	border-color: var(--kalyce-dark-grey-color);
+	color: var(--kalyce-dark-grey-color);
 }
 .btn.btn-white:hover,
 .btn.btn-white:focus {
 	background: transparent;
-	border-color: var(--veritas-dark-grey-color);
-	color: var(--veritas-dark-grey-color);
+	border-color: var(--kalyce-dark-grey-color);
+	color: var(--kalyce-dark-grey-color);
 }
 .bootstrap-select .btn.show,
 .btn:hover {
@@ -59,13 +59,13 @@ header nav .navbar-nav > li > a {
 .bootstrap-select>.dropdown-toggle.bs-placeholder:active,
 .bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
 .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
-	color: var(--veritas-dark-grey-color);
+	color: var(--kalyce-dark-grey-color);
 }
 .bootstrap-select>.dropdown-toggle {
 	border-radius: 8px;
 }
 .dropdown-item.active, .dropdown-item:active {
-	color: var(--veritas-dark-grey-color);
+	color: var(--kalyce-dark-grey-color);
 	text-decoration: none;
 	background-color: #e9ecef;
 }
@@ -75,7 +75,7 @@ header nav .navbar-nav > li > a {
 }
 
 header.header-appear nav.header-dark .logo img.default {
-	content:url('logo2-veritas.png');
+	content:url('logo2-kalyce.png');
 }
 
 .mfp-title {
@@ -122,7 +122,7 @@ footer a:hover,
 	font-size: 24px;
 	margin-bottom: 10px;
 	line-height: initial;
-	color: var(--veritas-dark-grey-color);
+	color: var(--kalyce-dark-grey-color);
 	font-weight: 500;
 	font-family: 'Work Sans', 'arial';
 }

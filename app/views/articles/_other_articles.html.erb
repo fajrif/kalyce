@@ -1,26 +1,19 @@
-<%= render "banner" %>
-<section class="wow animate__fadeIn">
-    <div class="container mb-4">
+<section class="pt-0 wow animate__fadeIn">
+    <div class="container margin-40px-bottom sm-margin-20px-bottom">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto text-center">
-                <h5 class="alt-font text-extra-dark-gray mb-2">Latest Journal</h5>
-                <h3 class="alt-font text-extra-dark-gray font-weight-400">Our Journal</h3>
-                <p class="w-80 mx-auto d-inline-block sm-w-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <h3 class="alt-font text-extra-dark-gray font-weight-400">Other Journal</h3>
             </div>
         </div>
     </div>
     <div class="container">
       <div class="row justify-content-center">
-          <% @articles.each_with_index do |article, index| %>
+          <% @articles.each_with_index do |article| %>
             <!-- start services item -->
-            <div class="col-12 <%= 'col-md-6' if index > 0 %> margin-40px-bottom sm-margin-20px-bottom wow animate__fadeInUp">
+            <div class="col-12 col-md-6 margin-40px-bottom sm-margin-20px-bottom wow animate__fadeInUp">
                 <div class="margin-20px-bottom overflow-hidden image-hover-style-1">
                   <a href="<%= journal_path(article) %>">
-                    <% if index == 0 %>
-                      <%= image_tag url_for(article.image.variant(resize_to_fill: [1024, 450])), class: "w-100" %>
-                    <% else %>
-                      <%= image_tag url_for(article.image), class: "w-100" %>
-                    <% end %>
+                    <%= image_tag url_for(article.image), class: "w-100" %>
                   </a>
                 </div>
                 <div>
@@ -33,9 +26,6 @@
             </div>
             <!-- end services item -->
           <% end %>
-      </div>
-      <div class="text-center margin-five-top wow animate__fadeInUp">
-        <%= paginate @articles, theme: :pofo %>
       </div>
     </div>
 </section>

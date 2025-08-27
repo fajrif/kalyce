@@ -9,6 +9,11 @@ class HomeController < ApplicationController
 
   def about
 		# get public about
+		@articles = Article.first(2)
   end
 
+  def treatments
+		# get public treatments
+		@treatments = Treatment.all
+  end
 end

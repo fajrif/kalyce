@@ -12,6 +12,7 @@
  *
  *= require bootsnav.css
  *= require theme-vendors.min.css
+ *= require font-icons.min.css
  *= require bootstrap-select.min.css
  *= require style.css
  *= require responsive.css
@@ -28,26 +29,19 @@
 }
 
 .alert {
-	padding-top: 0;
-	margin-bottom: 0;
-}
-.alert a {
 	color: #fff;
-	font-weight: 500;
 }
 .alert-danger {
 	--bs-alert-color: #fff;
 	--bs-alert-bg: var(--red-color);
 	--bs-alert-border-color: var(--very-light-red-color);
 	--bs-alert-link-color: #fff;
-	color: #dc3545;
 }
 .alert-success {
 	--bs-alert-color: #fff;
 	--bs-alert-bg: var(--green-color);
 	--bs-alert-border-color: var(--very-light-green-color);
 	--bs-alert-link-color: #fff;
-	color: #198754;
 }
 .btn-close {
 	--bs-btn-close-color: #fff;
@@ -175,17 +169,14 @@ input:checked + .slider:before {
 .bg-menu-treatments {
   background-image: url('menus/bg-menu3.png');
 }
-.bg-menu-treatments {
+.bg-menu-practitioners {
   background-image: url('menus/bg-menu4.png');
 }
-.bg-menu-practitioners {
+.bg-menu-journals {
   background-image: url('menus/bg-menu5.png');
 }
-.bg-menu-journals {
-  background-image: url('menus/bg-menu6.png');
-}
 .bg-menu-contact {
-  background-image: url('menus/bg-menu7.png');
+  background-image: url('menus/bg-menu6.png');
 }
 .bg-treatments {
   background-image: url('texture-sunflower.png');

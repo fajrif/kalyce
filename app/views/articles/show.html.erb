@@ -1,24 +1,29 @@
-<section class="page-title style-two" style="background-image: url(<%= url_for(@article.image) %>);">
-	<div class="auto-container">
-	</div>
+<%= render "shared/small_banner", parent_path: journals_path, parent_text: "Journal", title: @article.title %>
+<section class="pb-5 wow animate__fadeIn fadeInUp">
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-12 col-lg-9 col-md-10 mx-auto text-center">
+              <h3 class="alt-font text-extra-dark-gray font-weight-400 margin-40px-bottom sm-margin-20px-bottom"><%= @article.title %></h3>
+              <p class="w-90 mx-auto d-inline-block sm-w-100"><%= @article.short_description %></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 margin-40px-bottom sm-margin-20px-bottom wow animate__fadeInUp">
+              <div class="margin-20px-bottom overflow-hidden">
+                  <%= image_tag url_for(@article.image.variant(resize_to_fill: [1024, 450])), class: "w-100" %>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9 col-md-10 mx-auto line-height-28 last-paragraph-no-margin wow animate__fadeInUp">
+              <%= raw @article.content %>
+            </div>
+        </div>
+    </div>
 </section>
-
-<!-- Blog Single -->
-<section class="blog-single">
-	<div class="auto-container">
-		<div class="upper-box">
-			<h3><%= @article.title %></h3>
-			<ul class="post-info">
-				<li><%= @article.try(:published_date).try(:strftime, '%B %d, %Y') %></li>
-				<li><%= @article.category.name %></li>
-			</ul>
-		</div>
-	</div>
-	<div class="auto-container">
-		<% unless @article.headline.blank? %>
-			<p><strong><%= @article.headline %></strong></p>
-		<% end %>
-		<%= raw @article.content %>
-	</div>
-</section>
-<!-- End Blog Single -->
+<%= render "home/logo_separator" %>
+<%= render "other_articles" %>
