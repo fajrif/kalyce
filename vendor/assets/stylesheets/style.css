@@ -741,6 +741,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .margin-90px-all {margin:90px}
 .margin-95px-all {margin:95px}
 .margin-100px-all {margin:100px}
+.margin-700px-top {margin-top:700px}
 
 .no-margin {margin:0 !important}
 .no-margin-lr {margin-left: 0 !important; margin-right: 0 !important}
@@ -4036,3 +4037,25 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
 .table>:not(caption)>*>* {
   background-color: transparent;
 }
+.bg-menu-home {
+  background-image: url('menus/bg-menu1.png');
+}
+.bg-menu-about {
+  background-image: url('menus/bg-menu2.png');
+}
+.bg-menu-treatments {
+  background-image: url('menus/bg-menu3.png');
+}
+.bg-menu-practitioners {
+  background-image: url('menus/bg-menu4.png');
+}
+.bg-menu-journals {
+  background-image: url('menus/bg-menu5.png');
+}
+.bg-menu-contact {
+  background-image: url('menus/bg-menu6.png');
+}
+.bg-treatments {
+  background-image: url('texture-sunflower.png');
+}
+

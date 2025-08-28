@@ -159,26 +159,3 @@ input:checked + .slider:before {
 .layer-bg {
   background-image: url('layer-1.png');
 }
-
-.bg-menu-home {
-  background-image: url('menus/bg-menu1.png');
-}
-.bg-menu-about {
-  background-image: url('menus/bg-menu2.png');
-}
-.bg-menu-treatments {
-  background-image: url('menus/bg-menu3.png');
-}
-.bg-menu-practitioners {
-  background-image: url('menus/bg-menu4.png');
-}
-.bg-menu-journals {
-  background-image: url('menus/bg-menu5.png');
-}
-.bg-menu-contact {
-  background-image: url('menus/bg-menu6.png');
-}
-.bg-treatments {
-  background-image: url('texture-sunflower.png');
-}
-

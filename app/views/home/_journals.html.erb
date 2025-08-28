@@ -22,13 +22,13 @@
           </div>
         <% else %>
           <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start padding-eight-lr lg-padding-six-lr md-padding-15px-lr wow animate__fadeInLeft">
+            <div class="col-md-6 text-center text-md-start padding-eight-lr lg-padding-six-lr md-padding-15px-lr order-2 order-md-1 sm-margin-20px-bottom wow animate__fadeInLeft">
               <span class="text-uppercase margin-10px-bottom d-inline-block text-medium"><%= article.try(:category).try(:name) %></span>
               <h5 class="alt-font text-extra-dark-gray font-weight-500"><%= article.title %></h5>
               <p><%= article.short_description %></p>
               <a href="<%= journal_path(article) %>" class="text-uppercase alt-font text-extra-dark-gray font-weight-400 text-medium w-100">Read More <i class="ti-arrow-right margin-5px-left text-black text-medium position-relative top-2" aria-hidden="true"></i></a>
             </div>
-            <div class="col-md-6 text-center md-margin-30px-bottom wow animate__fadeInRight" data-wow-delay="0.2s">
+            <div class="col-md-6 text-center md-margin-30px-bottom order-1 order-md-2 wow animate__fadeInRight" data-wow-delay="0.2s">
               <%= image_tag url_for(article.image), class: "border-radius-6 w-100" %>
             </div>
           </div>
