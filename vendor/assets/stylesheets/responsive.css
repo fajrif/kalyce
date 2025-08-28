@@ -5455,6 +5455,10 @@
       background-position: right !important;
     }
 
+    .full-width-pull-menu .link-style-2 ul li a.active::before {
+      background: none;
+    }
+
     .tab-style2 .tab-content{border-top: none !important;}
     .tab-style2 .nav-tabs li a {
       padding: 0 10px;
