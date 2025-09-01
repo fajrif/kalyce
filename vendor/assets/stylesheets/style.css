@@ -123,7 +123,7 @@ header [class^="container-"] [class^="col-"], header [class^="container-"] [clas
 /* heading */
 h1, h2, h3, h4, h5, h6 {margin:0 0 20px; padding:0; letter-spacing: 0; font-weight: 400;}
 h1 {font-size:60px; line-height:60px;}
-h2 {font-size:50px; line-height:50px}
+h2 {font-size:55px; line-height:55px}
 h3 {font-size:40px; line-height:40px}
 h4 {font-size:30px; line-height:30px}
 h5 {font-size:25px; line-height:25px}
@@ -2361,7 +2361,7 @@ header.sticky nav.header-light-transparent .logo .logo-light, header.sticky nav.
 .navbar-top-scroll {position: absolute; top: 0; z-index: 5;}
 header.sticky nav.navbar-top-scroll {background-color: inherit;}
 header a.logo {display: inline-block; vertical-align: middle;}
-header a.logo img {max-height:56px;}
+header a.logo img {max-height:76px;}
 header .left-nav .sidebar-part1 a.logo img {max-height:inherit;}
 .logo-holder img {max-height: 26px;}
 
@@ -2429,11 +2429,18 @@ header nav .navbar-nav.text-normal > li > a {font-weight: 600; font-size: 12px}
 .navbar-nav > li.dropdown > .fas, .navbar-nav > li.dropdown > .fa-solid {display: none}
 .navbar-nav > li ul {margin: 0; padding: 0;}
 .navbar-toggler {border-radius: 0; margin-right: 0;float: right; border: none;}
-.mobile-toggle {display: block}
+.mobile-toggle {
+  display: block;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
 nav.navbar.bootsnav .navbar-toggle {top: 2px;}
 .sidebar-nav .mobile-toggle {display: none}
-.mobile-toggle span {display: block; width: 16px; height: 2px; background: #000000; content: "";}
-.mobile-toggle span:nth-child(2) {margin: 3px 0px;}
+.mobile-toggle span {display: block; width: 30px; height: 2px; background: #000000; content: ""; margin-bottom: 5px;}
+.mobile-toggle span:nth-child(2) {margin: 3px 0px;width:20px;margin-bottom: 5px;}
+.mobile-toggle span:last-child {width:10px;}
 .mobile-toggle:hover span, .white-link .mobile-toggle:hover span {background-color: red}
 .white-link .mobile-toggle span {background: #fff;}
 header nav .brand-logo {padding-top: 20px; padding-bottom: 20px;}
@@ -2589,7 +2596,10 @@ header nav.nav-full-width {width: 100%}
 .full-width-pull-menu .link-style-2 ul li {display: table; width: 100%;}
 .full-width-pull-menu .link-style-2 ul li a {background:inherit;color: #000000; font-size: 48px; line-height: 85px; position: relative;}
 
-.full-width-pull-menu .link-style-2 ul li a.active::before {
+.full-width-pull-menu .link-style-2 ul li a.active {
+  color: var(--base-color);
+}
+.full-width-pull-menu .link-style-2 ul li a:hover::before {
   content: '';
   background:url('logo-icon.png');
   position: absolute;
@@ -2932,7 +2942,7 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 /* down scroll */
 .down-section {position: absolute; width: 100%; bottom:50px; left: 0; right: 0}
 .scroll-down-section {position: absolute; width: 100%; bottom: -50px; left: 0; right: 0; z-index: 1;}
-.scroll-down-section div {height: 100px;}
+.scroll-down-section div {height: 150px;}
 
 /* ===================================
     22. Grid
@@ -4050,25 +4060,31 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
 .table>:not(caption)>*>* {
   background-color: transparent;
 }
-.bg-menu-home {
+.bg-menu-home,
+#parentMenuKalyce:has(li.home:hover) {
   background-image: url('menus/bg-menu1.png');
 }
-.bg-menu-about {
+.bg-menu-about,
+#parentMenuKalyce:has(li.about:hover) {
   background-image: url('menus/bg-menu2.png');
 }
-.bg-menu-treatments {
+.bg-menu-treatments,
+#parentMenuKalyce:has(li.treatments:hover) {
   background-image: url('menus/bg-menu3.png');
 }
-.bg-menu-practitioners {
+.bg-menu-practitioners,
+#parentMenuKalyce:has(li.practitioners:hover) {
   background-image: url('menus/bg-menu4.png');
 }
-.bg-menu-journals {
+.bg-menu-journals,
+#parentMenuKalyce:has(li.journals:hover) {
   background-image: url('menus/bg-menu5.png');
 }
-.bg-menu-contact {
+.bg-menu-contact,
+#parentMenuKalyce:has(li.contact:hover) {
   background-image: url('menus/bg-menu6.png');
 }
+
 .bg-treatments {
   background-image: url('texture-sunflower.png');
 }
-

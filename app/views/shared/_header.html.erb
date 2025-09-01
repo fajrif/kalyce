@@ -21,7 +21,7 @@
                               <%= image_tag("logo-white.png", alt: "Kalyce") %>
                             <% end %>
                         </div>
-                        <div class="col-md-7 px-0 full-screen d-flex flex-column justify-content-center xs-padding-45px-tb cover-background <%= set_bg_menu %>">
+                        <div id="parentMenuKalyce" class="col-md-7 px-0 full-screen d-flex flex-column justify-content-center xs-padding-45px-tb cover-background <%= set_bg_menu %>">
                             <div class="w-100 overflow-auto">
                                 <div class="h-100 w-100">
                                     <div class="h-100 w-100 overflow-hidden align-middle text-center text-md-end padding-six-lr alt-font link-style-2 lg-padding-six-lr xs-padding-15px-lr">
@@ -32,12 +32,12 @@
                                         </div>
                                         <!-- start menu -->
                                         <ul class="font-weight-400 no-padding-left mt-0 mb-0">
-                                          <li><a class="<%= 'active' if is_home_page? %>" href="<%= root_url %>">Home</a></li>
-                                          <li><a class="<%= 'active' if is_about_page? %>" href="<%= about_url %>">About</a></li>
-                                          <li><a class="<%= 'active' if is_treatments_page? %>" href="<%= treatments_url %>">Treatments</a></li>
-                                          <li><a class="<%= 'active' if is_practitioners_page? %>" href="<%= practitioners_url %>">Practitioners</a></li>
-                                          <li><a class="<%= 'active' if is_journals_page? %>" href="<%= journals_url %>">Journal</a></li>
-                                          <li><a class="<%= 'active' if is_contact_page? %>" href="<%= contact_url %>">Contact</a></li>
+                                          <li class="home"><a class="<%= 'active' if is_home_page? %>" href="<%= root_url %>">Home</a></li>
+                                          <li class="about"><a class="<%= 'active' if is_about_page? %>" href="<%= about_url %>">About</a></li>
+                                          <li class="treatments"><a class="<%= 'active' if is_treatments_page? %>" href="<%= treatments_url %>">Treatments</a></li>
+                                          <li class="practitioners"><a class="<%= 'active' if is_practitioners_page? %>" href="<%= practitioners_url %>">Practitioners</a></li>
+                                          <li class="journals"><a class="<%= 'active' if is_journals_page? %>" href="<%= journals_url %>">Journal</a></li>
+                                          <li class="contact"><a class="<%= 'active' if is_contact_page? %>" href="<%= contact_url %>">Contact</a></li>
                                         </ul>
                                         <!-- end menu -->
                                         <!-- start social links -->
